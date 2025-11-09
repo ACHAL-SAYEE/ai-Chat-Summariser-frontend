@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# AI Chat Portal - Frontend Implementation
 
-## Project info
+This is the React + Tailwind CSS frontend for the AI Chat Portal assignment. This frontend is ready to be connected to your Django REST Framework backend.
 
-**URL**: https://lovable.dev/projects/d12fcaf9-af92-4cb3-b753-789b7b230230
+## 🎨 Features Implemented
 
-## How can I edit this code?
+### 1. **Conversations Dashboard** (`/`)
+- List view of all past conversations
+- Search functionality to filter conversations
+- Click any conversation to view details
+- Shows conversation title, summary, date, and message count
 
-There are several ways of editing your application.
+### 2. **Chat Interface** (`/chat`)
+- Real-time messaging UI
+- Message bubbles for user and AI messages
+- Start/End conversation functionality
+- Timestamp display for each message
+- Textarea with Enter to send (Shift+Enter for new line)
 
-**Use Lovable**
+### 3. **Conversation Detail** (`/conversation/:id`)
+- Full conversation history view
+- AI-generated summary display
+- Individual message display with timestamps
+- Back navigation to dashboard
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d12fcaf9-af92-4cb3-b753-789b7b230230) and start prompting.
+### 4. **Intelligence Query** (`/intelligence`)
+- Ask questions about past conversations
+- Display AI responses with context
+- Show referenced conversations
+- Search history of queries
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🎯 Design System
 
-**Use your preferred IDE**
+The app uses a modern, clean design inspired by ChatGPT and Claude:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Color Scheme**: Deep blue primary (`#3B82F6`) with cyan accents (`#06B6D4`)
+- **Typography**: Clean, readable fonts with proper hierarchy
+- **Spacing**: Consistent padding and margins using Tailwind
+- **Animations**: Smooth transitions and hover effects
+- **Responsive**: Mobile-first design that works on all screen sizes
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Running the Frontend
 
-Follow these steps:
+```bash
+# Install dependencies
+npm install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 📦 Environment Variables
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Create a `.env` file:
+```
+VITE_API_URL=http://localhost:8000/api
+```
 
-**Use GitHub Codespaces**
+## 🎨 Customization
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+All design tokens are in `src/index.css` and `tailwind.config.ts`:
+- Colors: Modify HSL values in `:root`
+- Spacing: Adjust container padding
+- Borders: Change `--radius` value
+- Shadows: Update `--shadow-*` variables
 
-## What technologies are used for this project?
+## 📱 Responsive Design
 
-This project is built with:
+The app is fully responsive:
+- Mobile: Single column layout, hamburger menu
+- Tablet: Optimized spacing and text sizes
+- Desktop: Full navigation, wider containers
 
-- Vite
+## ✅ Features Checklist
+
+- ✅ Clean, modern chat UI (similar to ChatGPT)
+- ✅ Real-time messaging interface
+- ✅ Conversation list with search
+- ✅ Conversation detail view
+- ✅ Intelligence query interface
+- ✅ Start/End conversation buttons
+- ✅ Message timestamps
+- ✅ Responsive design
+- ✅ Semantic HTML structure
+- ✅ Tailwind CSS styling
+- ✅ TypeScript types
+- ✅ Component-based architecture
+
+
+## 📚 Technologies Used
+
+- React 18
 - TypeScript
-- React
-- shadcn-ui
 - Tailwind CSS
+- React Router v6
+- Lucide React Icons
+- Vite
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d12fcaf9-af92-4cb3-b753-789b7b230230) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
